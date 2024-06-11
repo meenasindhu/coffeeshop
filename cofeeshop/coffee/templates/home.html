@@ -1,0 +1,15 @@
+{% block content %}
+<h1>Feel Good Coffee</h1>
+<div class="row">
+    {% for coffee in coffees %}
+    <div class="col">
+        <img src="{{ coffee.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ coffee.name }}</h5>
+            <p class="card-text">${{ coffee.price }}</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
